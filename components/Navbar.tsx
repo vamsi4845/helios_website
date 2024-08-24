@@ -20,21 +20,23 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { services } from "@/components/Services";
-import SmoothScroll from 'smooth-scroll';
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const scroll = new SmoothScroll('a[href*="#"]', {
-      speed: 800,
-      speedAsDuration: true,
-      easing: 'easeInOutCubic'
-    });
+    // Use dynamic import for SmoothScroll
+    import('smooth-scroll').then((SmoothScroll) => {
+      const scroll = new SmoothScroll.default('a[href*="#"]', {
+        speed: 800,
+        speedAsDuration: true,
+        easing: 'easeInOutCubic'
+      });
 
-    return () => {
-      scroll.destroy();
-    };
+      return () => {
+        scroll.destroy();
+      };
+    });
   }, []);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
