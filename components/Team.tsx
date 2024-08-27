@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 import { useState } from "react";
 
-export default function Component() {
+export default function Team() {
   const teamMembers = [
     {
       name: "ANURAG KHANNA",

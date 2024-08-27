@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import Portfolio from "@/components/Portfolio";
 import Services from "@/components/Services";
+import Team from "@/components/Team";
 import { NavigationMenu } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <About/>
         <Portfolio/>
         <Services/>
+        <Team/>
         <Contact/>
       </main>
       <Footer/>
